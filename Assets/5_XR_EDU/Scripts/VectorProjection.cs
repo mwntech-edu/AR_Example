@@ -16,8 +16,22 @@ public class VectorProjection : MonoBehaviour
         
     }
 
-   private void OnGUI()
-   {
-      
-   }
+    private void OnDrawGizmos()
+    {
+        //OnGUI();
+
+
+    }
+
+    void OnGUI()
+    {
+     
+        Camera cam = Camera.main;
+        
+        // Draw labels
+        Vector3 zeroScrPos = cam.WorldToScreenPoint(transform.position);
+        
+        GUI.Label(new Rect(zeroScrPos.x, Screen.height - zeroScrPos.y, 100, 20), "My Test");
+        
+    }
 }
