@@ -19,13 +19,16 @@ public class VectorProjection : MonoBehaviour
     private void OnDrawGizmos()
     {
         //OnGUI();
+        Debug.DrawRay(transform.position, transform.forward, Color.blue);
 
+         Vector3 x2 = Vector3.Cross(Vector3.up, transform.forward);
 
-    }
+      Debug.DrawRay(transform.position, x2, Color.red);
 
-    void OnGUI()
+   }
+
+   void OnGUI()
     {
-     
         Camera cam = Camera.main;
         
         // Draw labels
