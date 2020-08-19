@@ -3,7 +3,8 @@ using System.Collections;
 
 public class UTGlobalUtility
 {
-   public static bool IsBehindOfMainCamera(Camera a_Camera, Vector3 a_WorldPos)
+   // DistanceToPoint version
+   public static bool IsBehindOfMainCamera_Old(Camera a_Camera, Vector3 a_WorldPos)
    {
       // Cull the object if it is back side of camera
       Plane cameraFrontPlane = new Plane( 
@@ -17,7 +18,18 @@ public class UTGlobalUtility
          return false;
    }
 
-   
+   // Dot product version
+   public static bool IsBehindOfMainCamera(Camera a_Camera, Vector3 a_WorldPos)
+   {
+      Vector3 camFwd = a_Camera.transform.forward;
+      Vector3 camSpacePos = a_Camera.transform.InverseTransformPoint(a_WorldPos);
+
+      if (Vector3.Dot(camFwd, camSpacePos) < 0)
+         return true;
+      else
+         return false;
+   }
+
    /// <summary>
    /// Return true if a_WorldPos is back side of Z plane of a_Transform
    /// </summary>
