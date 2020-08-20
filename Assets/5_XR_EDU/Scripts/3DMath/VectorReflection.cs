@@ -60,6 +60,5 @@ public class VectorReflection : MonoBehaviour
 		Vector3 zeroScrPos = cam.WorldToScreenPoint(transform.position);
 
 		GUI.Label(new Rect(zeroScrPos.x, Screen.height - zeroScrPos.y + 30, 300, 20), gameObject.name);
-
 	}
 }

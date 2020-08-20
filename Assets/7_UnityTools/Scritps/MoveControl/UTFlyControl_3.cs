@@ -22,11 +22,11 @@ public class UTFlyControl_3: MonoBehaviour
 
       float upDownVal = 0f;
 
-      if (Input.GetKey(KeyCode.Q))
+      if (Input.GetKey(KeyCode.E))
       {
          upDownVal = 1f;
       }
-      if (Input.GetKey(KeyCode.E))
+      if (Input.GetKey(KeyCode.Q))
       {
          upDownVal = -1f;
       }
