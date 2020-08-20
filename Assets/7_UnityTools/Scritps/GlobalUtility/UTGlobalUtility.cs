@@ -22,9 +22,9 @@ public class UTGlobalUtility
    public static bool IsBehindOfMainCamera(Camera a_Camera, Vector3 a_WorldPos)
    {
       Vector3 camFwd = a_Camera.transform.forward;
-      //Vector3 camSpacePos = a_Camera.transform.InverseTransformPoint(a_WorldPos);
+      Vector3 camPos = a_WorldPos - a_Camera.transform.position;
 
-      if (Vector3.Dot(camFwd, camFwd) < 0f)
+      if (Vector3.Dot(camFwd, camPos) < 0f)
          return true;
       else
          return false;

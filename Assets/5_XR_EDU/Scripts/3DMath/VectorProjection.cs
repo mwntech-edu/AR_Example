@@ -7,21 +7,21 @@ using UnityEngine;
 ///  or 
 /// Project VecU onto a plane whose normal vector direction is VecV
 /// 
-/// and save the result on VecP
+/// and save the result on VecProj
 /// </summary>
 public class VectorProjection : MonoBehaviour
 {
 	public bool m_ProjectionOnPlane = true;
 	public bool m_UnityFunctionMode = false;
 
-	public Vector3 m_LocalVecU = Vector3.right; 
+	public Vector3 m_LocalVecU = Vector3.right; // (1, 0, 0)
 	public Vector3 m_VecU;	// World version of m_LocalVecU (Calculated automatically)
 	
 	/// A target vector when m_ProjectionOnPlane is "False"
 	/// A plane normal vector when m_ProjectionOnPlane is "True"
-	public Vector3 m_VecV = Vector3.up;	// World Vector
+	public Vector3 m_VecV = Vector3.up;	// World Vector (0, 1, 0)
 
-	public Vector3 m_VecP = Vector3.zero;
+	public Vector3 m_VecProj = Vector3.zero;
 
 	
 	private Vector3 ProjectVectorOntoVector()
@@ -43,23 +43,23 @@ public class VectorProjection : MonoBehaviour
 		if (m_ProjectionOnPlane)
 		{
 			if(m_UnityFunctionMode)
-				m_VecP = Vector3.ProjectOnPlane(m_VecU, m_VecV);
+				m_VecProj = Vector3.ProjectOnPlane(m_VecU, m_VecV);
 			else
-				m_VecP = ProjectVectorOntoPlane();
+				m_VecProj = ProjectVectorOntoPlane();
 		}
 		else
 		{
 			if (m_UnityFunctionMode)
-				m_VecP = Vector3.Project(m_VecU, m_VecV);
+				m_VecProj = Vector3.Project(m_VecU, m_VecV);
 			else
-				m_VecP = ProjectVectorOntoVector();
+				m_VecProj = ProjectVectorOntoVector();
 		}
 		
 		Vector3 worldPos = transform.position;
 
 		Debug.DrawLine(worldPos, worldPos + m_VecU, Color.red);
 		Debug.DrawLine(worldPos, worldPos + m_VecV, Color.green);
-		Debug.DrawLine(transform.position, transform.position + m_VecP, Color.magenta);
+		Debug.DrawLine(transform.position, transform.position + m_VecProj, Color.magenta);
 	}
 
 	void OnGUI()

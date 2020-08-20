@@ -13,17 +13,6 @@ public class VectorTest : MonoBehaviour
    public float m_Magnitude;
    public Vector3 m_Direction;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
    void OnDrawGizmos()
    {

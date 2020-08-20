@@ -9,8 +9,8 @@ public class VectorReflection : MonoBehaviour
 {
 	
 	public bool m_UnityFunctionMode = false;
-
-	public Vector3 m_LocalVecP = Vector3.forward; 
+	
+	public Vector3 m_LocalVecP = Vector3.forward; // (0, 0, 1)
 	public Vector3 m_VecP;	// World version of m_LocalVecP (Calculated automatically)
 	
 	public Vector3 m_VecN = Vector3.up;	// World Vector
@@ -21,12 +21,13 @@ public class VectorReflection : MonoBehaviour
 	{
 		// Normalized the normal vector
 		m_VecN = Vector3.Normalize(m_VecN);
+							// m_VecN.normalized;
 	}
 
 	private Vector3 ReflectVectorOverVector()
 	{
 		// Fig. 1
-		Vector3 projVecP = Vector3.Dot( -m_VecP, m_VecN ) * m_VecN;
+		Vector3 projVecP = m_VecN * Vector3.Dot( -m_VecP, m_VecN );
 
 		Vector3 reflectionVec = m_VecP + (2f * projVecP);
 
