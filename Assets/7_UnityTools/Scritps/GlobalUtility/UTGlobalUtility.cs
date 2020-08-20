@@ -12,7 +12,7 @@ public class UTGlobalUtility
 
       float distFromCamPlane = cameraFrontPlane.GetDistanceToPoint(a_WorldPos);
       
-      if(distFromCamPlane < 0)		
+      if(distFromCamPlane < 0f)		
          return true;
       else
          return false;
@@ -22,9 +22,9 @@ public class UTGlobalUtility
    public static bool IsBehindOfMainCamera(Camera a_Camera, Vector3 a_WorldPos)
    {
       Vector3 camFwd = a_Camera.transform.forward;
-      Vector3 camSpacePos = a_Camera.transform.InverseTransformPoint(a_WorldPos);
+      //Vector3 camSpacePos = a_Camera.transform.InverseTransformPoint(a_WorldPos);
 
-      if (Vector3.Dot(camFwd, camSpacePos) < 0)
+      if (Vector3.Dot(camFwd, camFwd) < 0f)
          return true;
       else
          return false;
