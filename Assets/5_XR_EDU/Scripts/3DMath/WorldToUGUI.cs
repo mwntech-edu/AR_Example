@@ -30,16 +30,18 @@ public class WorldToUGUI : MonoBehaviour
 		((ViewportPosition.y * m_RootRectTransform.sizeDelta.y) - (m_RootRectTransform.sizeDelta.y * 0.5f)));
 
 		Vector3 camFwd = Camera.main.transform.forward;
-		Vector3 camToTarget = (a_WorldPosition - Camera.main.transform.position).normalized;
+		Vector3 camToTarget = a_WorldPosition - Camera.main.transform.position;
 		float dot = Vector3.Dot(camFwd, camToTarget);
 
 		if (dot < 0)
 		{
 			m_BackSide = true;
+			m_RectTr.gameObject.SetActive(false);
 		}
 		else
 		{
 			m_BackSide = false;
+			m_RectTr.gameObject.SetActive(true);
 		}
 
 		//now you can set the position of the ui element
