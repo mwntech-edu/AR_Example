@@ -33,6 +33,9 @@ public class VectorTest : MonoBehaviour
    {
       Camera cam = Camera.main;
 
+      // Cull the object if it is back side of camera
+      if (UTGlobalUtility.IsBehindOfMainCamera(cam, transform.position)) return;
+
       // Draw labels
       Vector3 zeroScrPos = cam.WorldToScreenPoint(transform.position);
 
