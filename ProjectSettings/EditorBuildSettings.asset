@@ -29,12 +29,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ARFoundationEx/Scenes/SimpleAR/SimpleAR.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/5_XR_EDU/Scenes/App/AR_Foundation_Ex01.unity
     guid: f105c73fbb2bd314bbec797a67d081e2
   - enabled: 0
     path: Assets/ARFoundationEx/Scenes/Plane Detection/FeatheredPlanes.unity
     guid: 8252358a1e2ba7549a94df43aacec984
+  - enabled: 1
+    path: Assets/5_XR_EDU/Scenes/App/AR_Foundation_Ex01_3.unity
+    guid: b36bb03c4c687894ba49681a36ae8e2f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
