@@ -32,27 +32,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: giwa_lower_1
-    second: {fileID: 2100000, guid: e3fa0f5182920d548b239d067436d881, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: giwa_side
     second: {fileID: 2100000, guid: 74aff152e16cdc9469e276fbcd6861dc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: giwa_side1
-    second: {fileID: 2100000, guid: 74aff152e16cdc9469e276fbcd6861dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: giwa_upper_
-    second: {fileID: 2100000, guid: 2e2a7ab45d4a88a4c8c9a264dbdc1ee2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: giwa_upper_1
     second: {fileID: 2100000, guid: 2e2a7ab45d4a88a4c8c9a264dbdc1ee2, type: 2}
   - first:
       type: UnityEngine:Material
@@ -63,11 +48,6 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: statue_stones
-    second: {fileID: 2100000, guid: bd48f3e8b4ce4cf46999e8ec6e589a68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: statue_stones1
     second: {fileID: 2100000, guid: bd48f3e8b4ce4cf46999e8ec6e589a68, type: 2}
   - first:
       type: UnityEngine:Material
