@@ -19,6 +19,8 @@ public class MyGameManager : MonoBehaviour
 
    public void OnStartButtonClick()
    {
-      SceneManager.LoadScene(1); 
+
+      SceneManager.LoadScene( 1, LoadSceneMode.Single); 
+      
    }
 }
