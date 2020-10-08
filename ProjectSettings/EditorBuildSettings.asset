@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/5_XR_EDU/Scenes/Examples/StartScene.unity
+    path: Assets/5_XR_EDU/Scenes/Examples/Basics/StartScene.unity
     guid: 71d582d30e0058449879f43e78f9fa9e
   - enabled: 0
-    path: Assets/5_XR_EDU/Scenes/Examples/Shooting_01.unity
+    path: Assets/5_XR_EDU/Scenes/Examples/Basics/Shooting_01.unity
     guid: cf9a9c233c844ec4797e14a24416ada0
   - enabled: 0
-    path: Assets/5_XR_EDU/Scenes/Examples/Shooting_02.unity
+    path: Assets/5_XR_EDU/Scenes/Examples/Basics/Shooting_02.unity
     guid: d6f046b89f999c648ac2286095bde1f0
   - enabled: 0
     path: Assets/5_XR_EDU/Scenes/Examples/AR_01.unity
     guid: a1f86545c762cdf48a969b443007e18b
   - enabled: 0
-    path: Assets/5_XR_EDU/Scenes/Examples/Shooting_02_ar.unity
+    path: Assets/5_XR_EDU/Scenes/Examples/Basics/Shooting_02_ar.unity
     guid: 120cac09ef294934e947813a723c4d65
   - enabled: 0
-    path: Assets/5_XR_EDU/Scenes/Examples/Shooting_02_ar2.unity
+    path: Assets/5_XR_EDU/Scenes/Examples/Basics/Shooting_02_ar2.unity
     guid: 9f992ed0f53562c4bacbd139778810c3
   - enabled: 0
     path: Assets/5_XR_EDU/Scenes/Examples/AR_02.unity
