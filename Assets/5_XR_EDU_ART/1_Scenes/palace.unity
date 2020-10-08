@@ -7516,6 +7516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Geunjeongmoon
       objectReference: {fileID: 0}
+    - target: {fileID: 5694467894603968303, guid: 1f3ba6dd755c1af45951e0cec3d53dbf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3ba6dd755c1af45951e0cec3d53dbf, type: 3}
 --- !u!1 &1652316912
