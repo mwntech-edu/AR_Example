@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/5_XR_EDU/Scenes/App/AR_Foundation_Ex01_3.unity
     guid: b36bb03c4c687894ba49681a36ae8e2f
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Sample/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 0
     path: Assets/5_XR_EDU/Scenes/Examples/AR_04_ImageTracking.unity
