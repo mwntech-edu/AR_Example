@@ -19,8 +19,17 @@ public class MyGameManager : MonoBehaviour
 
    public void OnStartButtonClick()
    {
-
       SceneManager.LoadScene( 1, LoadSceneMode.Single); 
-      
    }
+
+   public void LoadEmptyScene()
+   {
+      SceneManager.LoadScene("_Empty_", LoadSceneMode.Single);
+   }
+
+   public void LoadScene(int a_SceneNumber)
+   {
+      SceneManager.LoadScene(a_SceneNumber, LoadSceneMode.Single);
+   }
+
 }
