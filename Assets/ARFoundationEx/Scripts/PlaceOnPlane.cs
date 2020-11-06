@@ -71,6 +71,45 @@ namespace UnityEngine.XR.ARFoundation.Samples
 		
 		void Update()
 		{
+#if UNITY_EDITOR
+			if (Input.GetMouseButton(0))
+			{
+				RaycastHit hit;
+
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+				Physics.Raycast(ray, out hit, 100f);
+
+				if (hit.transform != null)
+				{
+					Debug.DrawLine(transform.position, hit.point, Color.yellow);
+					Debug.Log("Hit!! : " + hit.point.ToString());
+
+					if (spawnedObject == null)
+					{
+						spawnedObject = Instantiate(m_PlacedPrefab, hit.point, Quaternion.identity);
+
+						RotateTowardCamera();
+
+					}
+					else
+					{
+						Vector3 vecProj = Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up);
+
+						spawnedObject.transform.position = hit.point;
+
+						RotateTowardCamera();
+					}
+
+					return;
+				}
+				else
+				{
+					Debug.Log("No Hit!!");
+				}
+			}
+#endif
+
 			if (!TryGetTouchPosition(out Vector2 touchPosition))
 			{
 				//if (m_RaycastManager.Raycast(
