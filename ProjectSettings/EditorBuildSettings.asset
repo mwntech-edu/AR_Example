@@ -14,24 +14,30 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/5_XR_EDU/Scenes/App/1_Contents_01.unity
     guid: 990a2be6f4380ee4d9979343200fa744
-  - enabled: 0
+  - enabled: 1
     path: Assets/5_XR_EDU/Scenes/App/0_AR_System_03.unity
     guid: d8c71d8743351824183c80dd00dba6cf
-  - enabled: 0
+  - enabled: 1
     path: Assets/5_XR_EDU/Scenes/App/1_Contents1.unity
     guid: 96db1c9af6a7d6648851c6eed074efba
-  - enabled: 0
+  - enabled: 1
     path: Assets/5_XR_EDU/Scenes/App/1_Contents2.unity
     guid: b2e29635d76ec754c96e9bb0e6963273
-  - enabled: 0
+  - enabled: 1
     path: Assets/5_XR_EDU/Scenes/App/_Empty_.unity
     guid: f9b209fe23a01c041966255ad3321e23
   - enabled: 0
     path: Assets/5_XR_EDU/Scenes/App/0_AR_System_04.unity
     guid: 5c67da66862b1414faffb49ae178d34d
-  - enabled: 1
+  - enabled: 0
     path: Assets/5_XR_EDU/Scenes/Examples/AR/AR_06_Native.unity
     guid: c336152b550a1a64f99df9cfe634bb3a
+  - enabled: 0
+    path: Assets/ARFoundationEx/Scenes/FaceTracking/FacePose.unity
+    guid: d8b65509a10894e1dbb93c799ececfd9
+  - enabled: 0
+    path: Assets/5_XR_EDU/Scenes/Examples/AR/AR_07_FacePose.unity
+    guid: a88d6d728eae444438ee67a4a6c397a0
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
