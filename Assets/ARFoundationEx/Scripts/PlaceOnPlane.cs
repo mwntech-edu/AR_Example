@@ -56,15 +56,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
 		}
 
 
-		void RotateTowardCamera()
+		void RotateTowardCamera(GameObject a_GO)
 		{
-			if(spawnedObject != null)
+			if(a_GO != null)
 			{
 				Vector3 vecProj = Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up);
 
-				float angle = Vector3.SignedAngle(spawnedObject.transform.right, vecProj, Vector3.up);
+				float angle = Vector3.SignedAngle(a_GO.transform.right, vecProj, Vector3.up);
 
-				spawnedObject.transform.Rotate(0f, angle, 0f, Space.World);
+				a_GO.transform.Rotate(0f, angle, 0f, Space.World);
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 					{
 						spawnedObject = Instantiate(m_PlacedPrefab, hit.point, Quaternion.identity);
 
-						RotateTowardCamera();
+						RotateTowardCamera(spawnedObject);
 
 					}
 					else
@@ -98,7 +98,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
 						spawnedObject.transform.position = hit.point;
 
-						RotateTowardCamera();
+						RotateTowardCamera(spawnedObject);
 					}
 
 					return;
@@ -135,7 +135,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 				{
 					spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, Quaternion.identity);
 
-					RotateTowardCamera();
+					RotateTowardCamera(spawnedObject);
 
 				}
 				else
@@ -144,7 +144,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
 					spawnedObject.transform.position = hitPose.position;
 
-					RotateTowardCamera();
+					RotateTowardCamera(spawnedObject);
 				}
 			}
 		}
