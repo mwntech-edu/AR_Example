@@ -82,7 +82,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
 				if (hit.transform != null)
 				{
-					Debug.DrawLine(transform.position, hit.point, Color.yellow);
+					Debug.DrawLine(Camera.main.transform.position, hit.point, Color.yellow);
 					Debug.Log("Hit!! : " + hit.point.ToString());
 
 					if (spawnedObject == null)

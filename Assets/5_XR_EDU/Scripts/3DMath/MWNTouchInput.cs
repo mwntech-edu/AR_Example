@@ -32,7 +32,7 @@ public class MWNTouchInput : MonoBehaviour
 
             if (hit.transform != null)
             {
-               Debug.DrawLine(transform.position, hit.point, Color.yellow);
+               Debug.DrawLine(Camera.main.transform.position, hit.point, Color.yellow);
                Debug.Log("Hit!! : " +hit.point.ToString());
 
                m_SomeObject.transform.position = hit.point;
