@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class NativeTest : MonoBehaviour
 {
-   public void OnSaveScreenshotPress()
+   public void OnCaptureScreen()
+   { 
+   Texture2D ss = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+   ss.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+
+    ss.Apply();
+
+    NativeGallery.SaveImageToGallery(ss, "Screenshots", "MyScreenShot");
+}
+
+public void OnSaveScreenshotPress()
    {
       NativeToolkit.SaveScreenshot("MyScreenshot", "MyScreenshotFolder", "jpeg");
 
@@ -13,15 +23,4 @@ public class NativeTest : MonoBehaviour
       //NativeGallery.SaveImageToGallery(byte[] mediaBytes, string album, string filename, MediaSaveCallback callback = null)
    }
 
-   // Start is called before the first frame update
-   void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
